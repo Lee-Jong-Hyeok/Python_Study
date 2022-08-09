@@ -34,3 +34,18 @@ def connectURI(server, port):
 #호출
 print( connectURI("ycampus","80") )
 print( connectURI(port="80", server="ycampus") )
+
+#가변인자(입력 데이터가 가변적인 상황)
+def union(*ar):
+    #지역변수
+    result = []
+    for item in ar:
+        for x in item:
+            if x not in result:
+                result.append(x)
+    return result
+
+#호출
+#중지점을 추가 (Break Point)
+print( union("HAN","EGG") )
+print( union("HAM","EGG","SPAM") )
