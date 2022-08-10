@@ -24,6 +24,6 @@ account1.deposit(5000)
 account1.withdraw(3000)
 #외부에서 접금: _클래스명__변수명
 #혹시 개발자가 접근해야 하면 (백도어(뒷문))
-print(account1._BankAcconut__balance)
-print(account1._BankAcconut__name)
+#print(account1._BankAcconut__balance)
+# print(account1._BankAcconut__name)
 print(account1)
