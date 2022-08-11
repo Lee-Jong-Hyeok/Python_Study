@@ -27,5 +27,6 @@ print("---치환---")
 result = result.replace("spam","spam egg")
 print(result)
 lst = result.split()
+print(lst)
 print("---다시 합치기---")
-print( ":)".join(lst) )
+print( ":)".join(lst) ) # 합칠때 구분자 ":)"
