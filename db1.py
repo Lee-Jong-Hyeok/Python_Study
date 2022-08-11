@@ -3,7 +3,7 @@ import sqlite3
 #연결객체 생성(메모리에 저장)
 # con = sqlite3.connect(":memory:")
 #연결객체 생성(물리적인 파일에 저장)
-con = sqlite3.connect("c:\\work\\commit.db")
+con = sqlite3.connect("c:\\work\\sample.db")
 
 #커서객체 생성
 cur = con.cursor()
