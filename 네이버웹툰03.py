@@ -1,16 +1,17 @@
+from distutils.log import error
 from bs4 import BeautifulSoup
 from pprint import pprint
-import requests
+import requests # 웹서버랑 통신하는 LIB
 from urllib.request import urlretrieve #이미지 다운로드 받기 
-import re
-import os 
+import re # 정규표현식
+import os # 운영체제
 
 #저장 폴더를 생성
 try:
     if not (os.path.isdir('image')):
         os.makedirs(os.path.join('image'))
 except OSError as e:
-    if e.errno != errno.EEXIST:
+    if e.errno != error.EEXIST:
         print("폴더 생성 실패!")
         exit()
 
@@ -21,7 +22,7 @@ soup = BeautifulSoup(html.text, 'html.parser')
 html.close()
 
 #요일별 웹툰영역 추출하기
-data1_list=soup.findAll('div',{'class':'col_inner'})
+data1_list=soup.findAll('div',{'class':'col_inner'}) # findAll = find_all
 # pprint(data1_list)
 
 #전체 웹툰 리스트
